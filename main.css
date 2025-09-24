@@ -1,0 +1,14 @@
+h1 {
+    color:rgb(188, 125, 47)
+}
+
+.completed {
+    text-decoration: line-through;
+    color:rgb(61, 135, 39);
+}
+
+.trashcan{
+    font-size: small;
+    margin-left: 10px;
+    color: red;
+}
