@@ -76,6 +76,10 @@ item.appendChild(trashcan);
 //empty input
 trashcan.addEventListener("click", function(){
     item.remove();
+    itemText.setAttribute("class", "");
+        completed--;
+        completedElement.textContent= completed +" Slutförd!"
+        changeStatus(itemText.innerText,false);
 }
 );
 
