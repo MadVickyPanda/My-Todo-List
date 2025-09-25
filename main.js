@@ -7,7 +7,7 @@ const infoTextElement = document.querySelector("small");
 const todoList=document.querySelector("#todoList");
 let todoText = "";
 let completed = 0;
-const allTheTodos = [];
+const theTodos = [];
 
 
 
@@ -16,10 +16,8 @@ addToDoBtn.addEventListener("click", addTodo);
 
 //function change status todotext and completed 
 function changeStatus(todoText, completedStat){
-    let findIndex = allTheTodos.map(n => n.name).indexOf(todoText);
-    allTheTodos[findIndex].completed = completedStat;
-
-
+    let findIndex = theTodos.map(n => n.name).indexOf(todoText);
+    theTodosheTodos[findIndex].completed = completedStat;
 };
 
 function addTodo(){
@@ -34,7 +32,7 @@ todoText = inputTodo.value;
 
  //add the todo to the todo-array
  const todoObject={name:todoText, completed:false};
- allTheTodos.push(todoObject);
+ theTodosheTodos.push(todoObject);
  
 
 //create li
@@ -48,8 +46,8 @@ itemText.innerText = todoText;
 
 //add eventlistener to span with text
 itemText.addEventListener("click",
-    function(){
-        if(itemText.getAttribute("class") == "completed") {
+    function (){
+        if (itemText.getAttribute("class") == "completed") {
         itemText.setAttribute("class", "");
         completed--;
         completedElement.textContent= completed +" Slutförd!"
@@ -63,9 +61,8 @@ itemText.addEventListener("click",
             changeStatus(itemText.innerText,true);
         }
     }
-
-
 )
+
 item.appendChild(itemText);
 
 //add trashcan as a span on the li
@@ -74,12 +71,15 @@ trashcan.innerHTML="&#11097;";
 trashcan.setAttribute("class","trashcan");
 item.appendChild(trashcan);
 //empty input
-trashcan.addEventListener("click", function(){
+trashcan.addEventListener("click",function(){
     item.remove();
-    itemText.setAttribute("class", "");
-        completed--;
-        completedElement.textContent= completed +" Slutförd!"
-        changeStatus(itemText.innerText,false);
+    itemText.setAttribute("class", "completed");
+            completed--;
+            completedElement.textContent= completed + " Sluförd!"
+    let removeText=item.firstChild.firstChild.textContent
+    let indexToRemove=theTodos.map(n => n.name).indexOf(removeText);
+    allTheTodos.splice(indexToRemove,1);
+          
 }
 );
 
