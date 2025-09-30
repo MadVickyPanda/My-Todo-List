@@ -59,7 +59,7 @@ function addTodo() {
             else {
                 itemText.setAttribute("class", "completed" );
                 completed++;
-                completedElement.textContent = completed + " Sluförd!"
+                completedElement.textContent = completed + " Slutförd!"
                 changeStatus(itemText.innerText, true);
             }
         }
