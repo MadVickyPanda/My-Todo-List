@@ -1,6 +1,6 @@
 //script for my todo list
 const completedElement = document.querySelector("#completedNumber");
-const inputTodo = document.querySelector("#input1");
+const inputTodo = document.querySelector("#input1") ;
 const addToDoBtn = document.querySelector("#addTodoBtn");
 const infoTextElement = document.querySelector("small");
 const todoList = document.querySelector("#todoList");
@@ -19,6 +19,7 @@ function changeStatus(todoText, completedStat) {
     theTodos[findIndex].completed = completedStat;
 };
 
+
 function addTodo() {
     // things that will happen when you click the button "Lägg till"
     infoTextElement.textContent = "";
@@ -28,10 +29,13 @@ function addTodo() {
         infoTextElement.textContent = "Du måste skriva något!"
         return;
     }
+    
 
     //add the todo to the todo-array
     const todoObject = { name: todoText, completed: false };
     theTodos.push(todoObject);
+    
+    
 
 
     //create list
@@ -53,7 +57,7 @@ function addTodo() {
                 changeStatus(itemText.innerText, false);
             }
             else {
-                itemText.setAttribute("class", "completed");
+                itemText.setAttribute("class", "completed" );
                 completed++;
                 completedElement.textContent = completed + " Sluförd!"
                 changeStatus(itemText.innerText, true);

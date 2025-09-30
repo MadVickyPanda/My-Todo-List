@@ -1,12 +1,15 @@
-body { width: 560px; margin: 0 auto; 
-    background-image: radial-gradient(circle,#9bc38db7, #528552);
+body { width: 660px; margin: 0 auto; height: 660px;
+    background-color: rgb(158, 180, 120);
+    background-image: url("autumn.gif");
+    background-position: center center;
+
 
 
 }
 
 #field {
     border-radius: 25px;
-    background-color: rgba(248, 233, 214, 0.495);
+    background-color: rgba(248, 233, 214, 0.829);
     text-align: center;
 }
 
