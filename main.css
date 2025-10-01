@@ -21,20 +21,18 @@ ul {
     display: inline-block; 
     text-align: left; 
     color: #633001;
-    cursor: pointer;
-    
-    
+    cursor: pointer; 
 }
 
 li{
     font-size: x-large;
     list-style-type: none;
-    display:block;
+    list-style: circle ;
     margin: 5px;
     border:2px solid #ab5403;
-    border-radius: 15px;
-    padding:10px;
-    
+    border-radius: 10px;
+    padding:10px 20px;
+    list-style-position: inside;
     
 }
 
@@ -65,9 +63,12 @@ h1 {
     background-color: #e18e4b;
     font-family: "Caveat", cursive;
     font-size: large;
-    cursor: pointer;
-  
+    cursor: pointer; 
 }
+#addTodoBtn:hover{
+    background-color: #5e945b;
+}
+
 #completedNumber{
     color: #5e3206;
     font-family: 'Times New Roman', Times, serif;
@@ -86,11 +87,9 @@ h1 {
     color: red;
     font-weight: lighter;
     cursor: grab;
-    float: right;
-    
+    float: right;   
 }
 
 #todoList{
-    font-family: 'Courier New', Courier, monospace
-    
+    font-family: 'Courier New', Courier, monospace   
 }
