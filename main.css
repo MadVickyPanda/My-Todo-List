@@ -1,4 +1,4 @@
-body { width: 660px; margin: 0 auto; height: 660px;
+body { width: fit-content; margin: 0 auto; height: 660px;
     background-color: rgb(158, 180, 120);
     background-image: url("autumn.gif");
     background-position: center center;
@@ -8,8 +8,8 @@ body { width: 660px; margin: 0 auto; height: 660px;
 }
 
 #field {
-    border-radius: 23px;
-    background-color: rgba(248, 233, 214, 0.829);
+    border-radius: 10px;
+    background-color: rgba(248, 233, 214, 0.862);
     text-align: center;
 }
 
@@ -18,13 +18,24 @@ body { width: 660px; margin: 0 auto; height: 660px;
   }
 
 ul { 
-    display: inline-block; text-align: left; 
+    display: inline-block; 
+    text-align: left; 
     color: #633001;
     cursor: pointer;
+    
+    
 }
+
 li{
-    font-size: xx-large;
-    list-style-type: disc;
+    font-size: x-large;
+    list-style-type: none;
+    display:block;
+    margin: 5px;
+    border:2px solid #ab5403;
+    border-radius: 15px;
+    padding:10px;
+    
+    
 }
 
 h1 {
@@ -37,6 +48,7 @@ h1 {
     font-weight: bold;
     font-style: normal;
     cursor: default;
+    margin: 50px;
 }
 
 #input1{
@@ -69,15 +81,16 @@ h1 {
 }
 
 .trashcan{
-    font-size: small;
+    font-size: medium;
     margin-left: 130px;
     color: red;
-    font-weight: bold;
+    font-weight: lighter;
     cursor: grab;
+    float: right;
     
 }
 
 #todoList{
-    font-family: "Caveat", cursive;
-    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace
+    
 }
